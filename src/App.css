@@ -1,0 +1,116 @@
+#top{
+  z-index: 9 !important;
+  top: 50%;
+  bottom: 50%;
+  left: 2%;
+}
+:root {
+  --primary: #032541;
+  --secondary: #00A0CF;
+  --white: #fff;
+}
+
+.count-pill {
+  display: block;
+  background-color: var(--secondary);
+  padding: 5px 15px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: #fff;
+}
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+@media (min-width: 992px) {
+  .movie-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+}
+
+.movie-card {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  border: 0;
+  display: block;
+}
+
+.movie-card img {
+  width: 100%;
+  display: block;
+}
+
+.movie-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .overlay {
+  border: 3px solid var(--secondary);
+}
+
+.movie-card .vote-average {
+  width: 26px;
+  height: 26px;
+  background-color: rgb(0, 160, 207, 0.5);
+  color: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.movie-card .inner-card-controls {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.movie-card:hover .inner-card-controls {
+  opacity: 1;
+}
+
+
+.ctrl-btn {
+  color: #fefefe;
+  background-color: var(--primary);
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  padding: 5px;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.ctrl-btn:hover {
+  color: #c4c4c4;
+  cursor: pointer;
+}
+
+.movie-page .no-movies {
+  color: #c4c4c4;
+  font-size: 3rem;
+  text-align: center;
+}
