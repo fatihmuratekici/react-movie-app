@@ -12,7 +12,8 @@ function Header() {
   return (
     <div className={state.theme ? "bg-dark" : "bg-primary"}>
     <div className='container d-flex justify-content-between align-items-center p-2'>
-        <div className='d-flex justify-content'><RiMovie2Line className='text-white fs-1'/><span className='text-white fs-3'>MovieApp</span></div>
+        <div className='d-flex justify-content'><RiMovie2Line className='text-white fs-1'/><span className='text-white fs-3'><Link to='/'>MovieApp</Link>
+</span></div>
         <nav className='nav nav-bar gap-4 align-items-center'>
           <Link to="/" className='nav-item text-white nav-link'>Anasayfa</Link>
             <Link to="/izlenenler" className='nav-item nav-link text-white'>İzlenenler</Link>
